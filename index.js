@@ -22,7 +22,7 @@ client.on('guildMemberAdd', async (member) => {
 
 })
 
-client.on('guildMemberAdd', member =>{
-    var canale = client.channels.cache.get('948493301328252979')
-    canale.setName('members: ' + member.guild.memberCount);
-})
+client.on("guildMemberAdd", member => {
+    var canale = client.channels.cache.get("948493301328252979")
+    canale.setName("members: " + member.guild.memberCount)
+});
