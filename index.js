@@ -21,14 +21,3 @@ client.on('guildMemberAdd', async (member) => {
     await member.send({ embeds: [Embed1] });
 
 })
-
-client.on('guildMemberAdd', (member) => {
-    client.channels.cache.get('948660777177460817').setName(`All User: - ${member.guild.memberCount}`)
-    client.channels.cache.get('948660919175630898').setName(`Members: - ${member.guild.members.cache.filter(member => !member.user.bot).size}`)
-    client.channels.cache.get('948661031809450076').setName(`Bots: - ${member.guild.members.cache.filter(member => !member.user.bot).size}`)
-})
-client.on('guildMemberRemove', (member) => {
-    client.channels.cache.get('948660777177460817').setName(`All User: - ${member.guild.memberCount}`)
-    client.channels.cache.get('948660919175630898').setName(`Members: - ${member.guild.members.cache.filter(member => !member.user.bot).size}`)
-    client.channels.cache.get('948661031809450076').setName(`Bots: - ${member.guild.members.cache.filter(member => !member.user.bot).size}`)
-})
