@@ -23,7 +23,7 @@ client.on('guildMemberAdd', async (member) => {
 })
 client.on("messageCreate", (message) => {
     
-    if (message.content == "!embed") {
+    if (message.content == "!/embed") {
         var embed = new Discord.MessageEmbed()
             .setTitle("SERVER STATS OFF")
             .setDescription("Le statistiche del server sono momentaneamente offline, tempo stimato risoluzione problema: 24h/72h")
