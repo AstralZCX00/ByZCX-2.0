@@ -22,7 +22,7 @@ client.on('guildMemberAdd', async (member) => {
 
 })
 client.on("messageCreate", (message) => {
-    if (message.content == "!/embed") {
+    if (message.content == "!/embedStatsOff") {
         var embed2 = new Discord.MessageEmbed()
         .setColor('#ff002b')
         .setTitle('SERVER STATS OFF')
