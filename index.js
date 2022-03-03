@@ -17,7 +17,7 @@ client.on('guildMemberAdd', async (member) => {
        .setColor('#ff002b')
        .setTitle('Benvenuto in ByZCX 2.0')
        .setDescription('Benvenuto in ByZCX 2.0, per accedere ai canali sei pregato di cliccare sulla reazione in fondo al regolamento per confermare la presa visione')
-       .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg%27');
+       .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg');
     await member.send({ embeds: [Embed1] });
 
 })
