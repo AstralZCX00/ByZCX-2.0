@@ -32,3 +32,15 @@ client.on("messageCreate", (message) => {
         message.channel.send({ embeds: [embed2] })
     }
 })
+client.on('guildMemberAdd', async (member) => {
+    setInterval(function () {
+        var canale = client.channels.cache.get("949222492432654336");
+        canale.setName(`👾│members: ${canale.guild.memberCount}`);
+    }, 1000 * 60 * 5)
+})
+client.on('guildMemberRemove', async (member) => {
+    setInterval(function () {
+        var canale = client.channels.cache.get("949222492432654336");
+        canale.setName(`👾│members: ${canale.guild.memberCount}`);
+    }, 1000 * 60 * 5)
+})
