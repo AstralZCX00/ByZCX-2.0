@@ -23,7 +23,7 @@ client.on("interactionCreate", interaction => {
         interaction.guild.channels.create(interaction.user.username, {
             type: "text",
             topic: `User ID: ${interaction.user.id}`,
-            parent: "idCategoria", //Settare la categoria,
+            parent: "949406150011531335", //Settare la categoria,
             permissionOverwrites: [
                 {
                     id: interaction.guild.id,
@@ -34,7 +34,7 @@ client.on("interactionCreate", interaction => {
                     allow: ["VIEW_CHANNEL"]
                 },
                 { //Aggiungere altri "blocchi" se si vogliono dare permessi anche a ruoli o utenti
-                    id: "idRuolo",
+                    id: "948171930475851856",
                     allow: ["VIEW_CHANNEL"]
                 }
             ]
