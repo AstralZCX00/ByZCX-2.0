@@ -1,13 +1,6 @@
 //Prima di tutto mandare il messaggio del ticket
 client.on("messageCreate", message => {
-    if (message.content == "!comando") {
-        var embed2 = new Discord.MessageEmbed()
-    .setColor('#ff002b')
-    .setTitle('SERVER STATS OFF')
-    .setDescription('Le statistiche del server sono momentaneamente offline')
-    .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg')
-    .addField('tempo stimato', 'dalle 24 alle 72 ore')
-    message.channel.send({ embeds: [embed2] })
+    if (message.content == "!commandticket") {
         var button1 = new Discord.MessageButton()
             .setLabel("Apri ticket")
             .setCustomId("apriTicket")
@@ -16,7 +9,7 @@ client.on("messageCreate", message => {
         var row = new Discord.MessageActionRow()
             .addComponents(button1)
 
-        message.channel.send({ content: "Clicca sul bottone per aprire un ticket", components: [row] })
+        message.channel.send({ embeds: [embedticket] , components: [row] })
     }
 })
 
