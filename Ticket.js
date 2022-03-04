@@ -9,6 +9,11 @@ client.on("messageCreate", (message) => {
 )
 client.on("messageCreate", message => {
     if (message.content == "!commandticket") {
+        var embedticket = new Discord.MessageEmbed()
+        .setColor('#ff002b')
+        .setTitle('APRI UN TICKET')
+        .setDescription('clicca sul bottone in basso per aprire un ticket e parlare direttamente con lo Staff')
+        .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg')
         var button1 = new Discord.MessageButton()
             .setLabel("Apri ticket")
             .setCustomId("apriTicket")
@@ -16,12 +21,6 @@ client.on("messageCreate", message => {
 
         var row = new Discord.MessageActionRow()
             .addComponents(button1)
-        
-        var embedticket = new Discord.MessageEmbed()
-            .setColor('#ff002b')
-            .setTitle('APRI UN TICKET')
-            .setDescription('clicca sul bottone in basso per aprire un ticket e parlare direttamente con lo Staff')
-            .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg')
 
         message.channel.send({ embeds: [embedticket] , components: [row] })
     }
