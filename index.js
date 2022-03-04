@@ -33,6 +33,6 @@ client.on("messageCreate", (message) => {
     }
 })
 client.on('guildMemberAdd', (member) => {
-    var canale = client.channel.cache.get("949222492432654336")
+    var canale = client.channel.cache.get("948660777177460817")
     canale.setName(`👾│members: ${canale.guild.memberCount}`)
 })
