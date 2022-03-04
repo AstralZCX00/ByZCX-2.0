@@ -28,7 +28,7 @@ client.on("messageCreate", (message) => {
         .setTitle('SERVER STATS OFF')
         .setDescription('Le statistiche del server sono momentaneamente offline')
         .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg')
-        .addField('tempo stimato', 'dalle 24 alle 72 ore')
+        .addField('tempo stimato', 'momentaneamente le funzioni Server Stats sono offline fino a data da destinarsi')
         message.channel.send({ embeds: [embed2] })
     }
 })
