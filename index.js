@@ -32,7 +32,7 @@ client.on("messageCreate", (message) => {
         message.channel.send({ embeds: [embed2] })
     }
 })
-client.on('guildMemberAdd', (member) => {
+client.on('guildMemberAdd', async (member) => {
     var canale = client.channel.cache.get("948660777177460817")
     canale.setName(`👾│members: ${canale.guild.memberCount}`)
 })
