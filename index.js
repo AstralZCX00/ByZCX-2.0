@@ -54,7 +54,7 @@ client.on("messageCreate", (message) => {
              },
              {
                  name: 'ABBONAMENTI',
-                 value: 'Settmanali €70.00 + livello, Mensili €320.00 + livello',
+                 value: 'Settmanali €70.00 + livello, Mensili €320.00 + livello (digita !/abbonamenti per sapere di più)',
                  inline: false
              }
         )
@@ -146,8 +146,8 @@ client.on("messageCreate", (message) => {
 })
 
 client.on("messageCreate", (message) => {
-    if (message.content == "!/pacchetti") {
-        var embed5 = new Discord.MessageEmbed()
+    if (message.content == "!/abbonamenti") {
+        var embed6 = new Discord.MessageEmbed()
         .setColor('#ff002b')
         .setTitle('PREZZI GRAFICHE')
         .setDescription('nei fields sottostanti troverete i prezzi delle grafiche')
@@ -155,27 +155,17 @@ client.on("messageCreate", (message) => {
         .addField('\u200b', '\u200b')
         .addFields(
              {
-                 name: 'STANDARD',
-                 value: '€60.00, x1 logo, x1 banner',
+                 name: 'Settimanale',
+                 value: '€70.00',
                  inline: false 
              },
              {
                  name: 'MEDIUM',
-                 value: '€120.00, x1 logo, x1 banner, x1 sfondo',
-                 inline: false
-             },
-             {
-                 name: 'PREMIUM',
-                 value: '€180.00, x1 logo, x1 banner, x2 sfondi, x1 intro, x1 outro',
-                 inline: false
-             },
-             {
-                 name: 'ROYALE',
-                 value: '€240.00, x2 loghi, x3 banner, x4 sfondi, x1 intro, x1 outro, 4 copertine a scelta',
+                 value: '€320.00',
                  inline: false
              },
         )
-        message.author.send({ embeds: [embed5] })
+        message.author.send({ embeds: [embed6] })
     }
 })
 //Prima di tutto mandare il messaggio del ticket
