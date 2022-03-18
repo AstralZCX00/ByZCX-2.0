@@ -155,12 +155,12 @@ client.on("messageCreate", (message) => {
         .addField('\u200b', '\u200b')
         .addFields(
              {
-                 name: 'Settimanale',
+                 name: 'SETTIMANALE',
                  value: '€70.00',
                  inline: false 
              },
              {
-                 name: 'MEDIUM',
+                 name: 'MENSILE',
                  value: '€320.00',
                  inline: false
              },
