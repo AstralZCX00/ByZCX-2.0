@@ -1,6 +1,6 @@
 //Prima di tutto mandare il messaggio del ticket
 client.on("messageCreate", message => {
-    if (message.content == "!comando") {
+    if (message.content == "!newticket") {
         var button1 = new Discord.MessageButton()
             .setLabel("Apri ticket")
             .setCustomId("apriTicket")
