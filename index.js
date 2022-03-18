@@ -49,7 +49,7 @@ client.on("messageCreate", (message) => {
              },
              {
                  name: 'PACCHETTI',
-                 value: 'Pacchetto Standard, Pacchetto Medium, Pacchetto Premium, Pacchetto Royal (digita !/pacchetti per sapere di più)',
+                 value: 'Pacchetto Standard, Pacchetto Medium, Pacchetto Premium, Pacchetto Royale (digita !/pacchetti per sapere di più)',
                  inline: false
              },
              {
@@ -110,6 +110,40 @@ client.on("messageCreate", (message) => {
         message.author.send({ embeds: [embed4] })
     }
 })
+
+    client.on("messageCreate", (message) => {
+        if (message.content == "!/pacchetti") {
+            var embed5 = new Discord.MessageEmbed()
+            .setColor('#ff002b')
+            .setTitle('PREZZI GRAFICHE')
+            .setDescription('nei fields sottostanti troverete i prezzi delle grafiche')
+            .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg')
+            .addField('\u200b', '\u200b')
+            .addFields(
+                 {
+                     name: 'STANDARD',
+                     value: '€60.00, x1 logo, x1 banner',
+                     inline: false 
+                 },
+                 {
+                     name: 'MEDIUM',
+                     value: '€120.00, x1 logo, x1 banner, x1 sfondo',
+                     inline: false
+                 },
+                 {
+                     name: 'PREMIUM',
+                     value: '€180.00, x1 logo, x1 banner, x2 sfondi, x1 intro, x1 outro',
+                     inline: false
+                 },
+                 {
+                     name: 'ROYALE',
+                     value: '€240.00, x2 loghi, x3 banner, x4 sfondi, x1 intro, x1 outro, 4 copertine a scelta',
+                     inline: false
+                 },
+            )
+            message.author.send({ embeds: [embed5] })
+        }
+})
 //Prima di tutto mandare il messaggio del ticket
 client.on("messageCreate", message => {
     if (message.content == "!comando") {
@@ -155,4 +189,3 @@ client.on("interactionCreate", interaction => {
         })
     }
 })
-
