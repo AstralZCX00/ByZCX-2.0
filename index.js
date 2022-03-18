@@ -63,7 +63,7 @@ client.on("messageCreate", (message) => {
 })
 
 client.on("messageCreate", (message) => {
-    if (message.content == "!/grafichesingole") {
+    if (message.content == "!/pacchetti") {
         var embed4 = new Discord.MessageEmbed()
         .setColor('#ff002b')
         .setTitle('PREZZI GRAFICHE')
