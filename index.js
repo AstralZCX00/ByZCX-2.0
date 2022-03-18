@@ -33,7 +33,7 @@ client.on("messageCreate", (message) => {
     }
 })
 client.on("messageCreate", (message) => {
-    if (message.content == "!/Prezzi") {
+    if (message.content == "!/prezzi") {
         var embed3 = new Discord.MessageEmbed()
         .setColor('#ff002b')
         .setTitle('PREZZI GRAFICHE')
