@@ -40,6 +40,23 @@ client.on("messageCreate", (message) => {
         .setDescription('nei fields sottostanti troverete i prezzi delle grafiche')
         .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg')
         .addField('Prezzi', 'attendi...')
+        .addFields(
+             {
+                 name: 'Field 1',
+                 value: 'Valore di prova del field 1',
+                 inline: true 
+             },
+             {
+                 name: 'Field 2',
+                 value: 'Valore di prova field 2',
+                 inline: true
+             },
+             {
+                 name: 'Field 3',
+                 value: 'Valore di prova 3',
+                 inline: true
+             }
+        )
         message.channel.send({ embeds: [embed3] })
     }
 })
