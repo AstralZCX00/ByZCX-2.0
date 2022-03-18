@@ -172,10 +172,11 @@ client.on("messageCreate", (message) => {
 client.on("messageCreate", message => {
     if (message.content == "!nuovoticket") {
         var embedticket = new Discord.MessageEmbed()
-            .setColor('#ff002b')
-            .setTitle('TICKET')
-            .setDescription('Clicca sul bottone per aprire un ticket')
-            .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg')
+        .setColor('#ff002b')
+        .setTitle('TICKET')
+        .setDescription('Clicca sul bottone per aprire un ticket')
+        .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg')
+        message.channel.send({ embeds: [embedticket] })
         
         var button1 = new Discord.MessageButton()
             .setLabel("Apri ticket")
@@ -185,7 +186,7 @@ client.on("messageCreate", message => {
         var row = new Discord.MessageActionRow()
             .addComponents(button1)
 
-        message.channel.send({ content: ({ embeds: [embedticket] }), components: [row] })
+        message.channel.send({ content: { embeds: [embedticket] }, components: [row] })
     }
 })
 
