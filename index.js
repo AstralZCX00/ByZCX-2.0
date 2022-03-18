@@ -42,18 +42,18 @@ client.on("messageCreate", (message) => {
         .addField('Prezzi', 'attendi...')
         .addFields(
              {
-                 name: 'Field 1',
-                 value: 'Valore di prova del field 1',
+                 name: 'GRAFICHE SINGOLE',
+                 value: 'Dai €35.00 in poi (digita !/grafichesingole per sapere di più)',
                  inline: true 
              },
              {
-                 name: 'Field 2',
-                 value: 'Valore di prova field 2',
+                 name: 'PACCHETTI',
+                 value: 'Pacchetto Standard, Pacchetto Medium, Pacchetto Premium, Pacchetto Royal (digita !/pacchetti per sapere di più)',
                  inline: true
              },
              {
-                 name: 'Field 3',
-                 value: 'Valore di prova 3',
+                 name: 'ABBONAMENTI',
+                 value: 'Settmanali €70.00 + livello, Mensili €320.00 + livello',
                  inline: true
              }
         )
