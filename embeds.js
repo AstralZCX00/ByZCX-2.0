@@ -60,7 +60,7 @@ client.on("messageCreate", (message) => {
 })
 
 client.on("messageCreate", (message) => {
-    if (message.content == "!/prezzi") {
+    if (message.content == "!/grafichesingole") {
         var embed4 = new Discord.MessageEmbed()
         .setColor('#ff002b')
         .setTitle('PREZZI GRAFICHE')
