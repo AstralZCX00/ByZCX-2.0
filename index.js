@@ -179,7 +179,7 @@ client.on("messageCreate", message => {
         var row = new Discord.MessageActionRow()
             .addComponents(button1)
 
-        message.channel.send({ content: ({ embeds: [embedticket] }), components: [row] })
+        message.channel.send({ , components: [row] })
     }
 })
 
