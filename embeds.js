@@ -100,7 +100,8 @@ client.on("messageCreate", (message) => {
              },
              {
                  name: 'INTRO/OUTRO',
-                 value: '€65.00 per x1 intro + x1 outro'
+                 value: '€65.00 per x1 intro + x1 outro',
+                 inline: false
              }
         )
         message.channel.send({ embeds: [embed4] })
