@@ -44,17 +44,17 @@ client.on("messageCreate", (message) => {
              {
                  name: 'GRAFICHE SINGOLE',
                  value: 'Dai €35.00 in poi (digita !/grafichesingole per sapere di più)',
-                 inline: true 
+                 inline: false 
              },
              {
                  name: 'PACCHETTI',
                  value: 'Pacchetto Standard, Pacchetto Medium, Pacchetto Premium, Pacchetto Royal (digita !/pacchetti per sapere di più)',
-                 inline: true
+                 inline: false
              },
              {
                  name: 'ABBONAMENTI',
                  value: 'Settmanali €70.00 + livello, Mensili €320.00 + livello',
-                 inline: true
+                 inline: false
              }
         )
         message.channel.send({ embeds: [embed3] })
