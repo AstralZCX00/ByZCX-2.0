@@ -224,6 +224,7 @@ client.on("interactionCreate", interaction => {
         })
     }
 })
+
 client.on("messageCreate", message => {
     if (message.content == "!close") {
         var topic = message.channel.topic;
