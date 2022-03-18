@@ -64,7 +64,50 @@ client.on("messageCreate", (message) => {
 
 client.on("messageCreate", (message) => {
     if (message.content == "!/grafichesingole") {
-        message.author.send ({})
+        var embed4 = new Discord.MessageEmbed()
+        .setColor('#ff002b')
+        .setTitle('PREZZI GRAFICHE')
+        .setDescription('nei fields sottostanti troverete i prezzi delle grafiche')
+        .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg')
+        .addField('\u200b', '\u200b')
+        .addFields(
+             {
+                 name: 'LOGO',
+                 value: '€50.00',
+                 inline: false 
+             },
+             {
+                 name: 'BANNER',
+                 value: '€45.00',
+                 inline: false
+             },
+             {
+                 name: 'COPERTINE',
+                 value: '€35.00',
+                 inline: false
+             },
+             {
+                 name: 'STICKER',
+                 value: '€15.00 x3',
+                 inline: false
+             },
+             {
+                 name: 'SFONDO PC/CELLULARE',
+                 value: '€35.00 per cellulare e pc 16:9, €45.00 per pc con risoluzione diversa da quella standard',
+                 inline: false
+             },
+             {
+                 name: 'VIDEO CLIP',
+                 value: '€55.00 ogni 15 minuti (i prezzi veranno scalati in base alla lunghezza del video clip) + preventivo di €15.00',
+                 inline: false
+             },
+             {
+                 name: 'INTRO/OUTRO',
+                 value: '€65.00 per x1 intro + x1 outro',
+                 inline: false
+             }
+        )
+        message.channel.send({ embeds: [embed4] })
     }
 })
 //Prima di tutto mandare il messaggio del ticket
