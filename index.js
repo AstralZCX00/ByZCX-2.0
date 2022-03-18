@@ -34,13 +34,13 @@ client.on("messageCreate", (message) => {
 })
 client.on("messageCreate", (message) => {
     if (message.content == "!/Prezzi") {
-        var embed2 = new Discord.MessageEmbed()
+        var embed3 = new Discord.MessageEmbed()
         .setColor('#ff002b')
         .setTitle('PREZZI GRAFICHE')
         .setDescription('nei fields sottostanti troverete i prezzi delle grafiche')
         .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg')
         .addField('tempo stimato', 'dalle 24 alle 72 ore')
-        message.channel.send({ embeds: [embed2] })
+        message.channel.send({ embeds: [embed3] })
     }
 })
 //Prima di tutto mandare il messaggio del ticket
