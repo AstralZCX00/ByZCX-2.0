@@ -176,6 +176,7 @@ client.on("messageCreate", message => {
         .setTitle('TICKET')
         .setDescription('Clicca sul bottone per aprire un ticket')
         .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg')
+        message.channel.send({ embeds: [embedticket] })
         
         var button1 = new Discord.MessageButton()
             .setLabel("Apri ticket")
