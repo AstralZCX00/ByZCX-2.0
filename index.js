@@ -39,7 +39,7 @@ client.on("messageCreate", (message) => {
         .setTitle('PREZZI GRAFICHE')
         .setDescription('nei fields sottostanti troverete i prezzi delle grafiche')
         .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg')
-        .addField('Prezzi', 'attendi...')
+        .addField('\u200b', '\u200b')
         .addFields(
              {
                  name: 'GRAFICHE SINGOLE',
