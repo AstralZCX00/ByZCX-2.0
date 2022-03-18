@@ -64,6 +64,8 @@ client.on("messageCreate", (message) => {
 
 client.on("messageCreate", (message) => {
     if (message.content == "!/grafichesingole") {
+        message.author.send ({
+
         var embed4 = new Discord.MessageEmbed()
         .setColor('#ff002b')
         .setTitle('PREZZI GRAFICHE')
@@ -107,7 +109,8 @@ client.on("messageCreate", (message) => {
                  inline: false
              }
         )
-        message.channel.send({ embeds: [embed4] })
+        message.author.send({ embeds: [embed4] })
+        })
     }
 })
 //Prima di tutto mandare il messaggio del ticket
