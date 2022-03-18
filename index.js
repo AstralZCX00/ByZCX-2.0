@@ -107,7 +107,7 @@ client.on("messageCreate", (message) => {
                  inline: false
              }
         )
-        message.channel.send({ embeds: [embed4] })
+        message.author.send({ embeds: [embed4] })
     }
 })
 //Prima di tutto mandare il messaggio del ticket
