@@ -200,7 +200,7 @@ client.on("interactionCreate", interaction => {
         interaction.guild.channels.create(interaction.user.username, {
             type: "text",
             topic: `User ID: ${interaction.user.id}`,
-            parent: "idCategoria", //Settare la categoria,
+            parent: "949406150011531335", //Settare la categoria,
             permissionOverwrites: [
                 {
                     id: interaction.guild.id,
@@ -287,7 +287,7 @@ client.on("messageCreate", message => {
                 }
                 var haIlPermesso = message.channel.permissionsFor(utente).has("VIEW_CHANNEL", true)
                 if (!haIlPermesso) {
-                    message.channel.send("Questo utente non ha gia accesso al ticket")
+                    message.channel.send("Questo utente non ha già accesso al ticket")
                     return
                 }
                 if (utente.permissions.has("MANAGE_CHANNELS")) {
