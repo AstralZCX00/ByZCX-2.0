@@ -132,12 +132,12 @@ client.on("messageCreate", (message) => {
              },
              {
                  name: 'PREMIUM',
-                 value: '€180.00, x1 logo, x1 banner, x2 sfondi, x1 intro, x1 outro',
+                 value: '€180.00, x1 logo, x1 banner, x2 sfondi, x1 intro, x1 outro + preventivo del 20%',
                  inline: false
              },
              {
                  name: 'ROYALE',
-                 value: '€240.00, x2 loghi, x3 banner, x4 sfondi, x1 intro, x1 outro, 4 copertine a scelta',
+                 value: '€240.00, x2 loghi, x3 banner, x4 sfondi, x1 intro, x1 outro, 4 copertine a scelta + preventivo del 20%',
                  inline: false
              },
         )
@@ -156,11 +156,11 @@ client.on("messageCreate", (message) => {
         .addFields(
              {
                  name: 'SETTIMANALE',
-                 value: '€70.00',
+                 value: '€70.00 + lvl. 1/2/3',
                  inline: false 
              },
              {
-                 name: 'MENSILE',
+                 name: 'MENSILE + lvl. 1/2/3',
                  value: '€320.00',
                  inline: false
              },
