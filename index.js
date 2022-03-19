@@ -355,7 +355,7 @@ client.on("interactionCreate", interaction => {
                 }
             ]
         }).then(canale => {
-            canale.send("Grazie per aver aperto un ticket")
+            canale.send({ embeds: [embed3] })
         })
     }
 })
