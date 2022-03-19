@@ -160,8 +160,8 @@ client.on("messageCreate", (message) => {
                  inline: false 
              },
              {
-                 name: 'MENSILE + lvl. 1/2/3',
-                 value: '€320.00',
+                 name: 'MENSILE',
+                 value: '€320.00 + lvl. 1/2/3',
                  inline: false
              },
         )
