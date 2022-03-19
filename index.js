@@ -346,11 +346,15 @@ client.on("interactionCreate", interaction => {
                     allow: ["VIEW_CHANNEL"]
                 },
                 {
+                    id: "948282064854196324",
+                    allow: ["VIEW_CHANNEL"]
+                },
+                {
                     id: "948171930475851856",
                     allow: ["VIEW_CHANNEL"]
                 },
                 {
-                    id: "954391756688986143",
+                    id: "948171930475851856",
                     allow: ["VIEW_CHANNEL"]
                 }
             ]
