@@ -219,7 +219,7 @@ client.on("interactionCreate", interaction => {
                 }
             ]
         }).then(canale => {
-            canale.send("Grazie per aver aperto un ticket")
+            canale.send("Grazie per aver aperto un ticket, uno staffer ti risponderà a breve!")
         })
     }
 })
