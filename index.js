@@ -495,7 +495,7 @@ client.on("interactionCreate", interaction => {
                 }
             ]
         }).then(canale => {
-            canale.send("Grazie per aver aperto un ticket, uno il founder ti risponderà a breve per la proposta di partnership!")
+            canale.send("Grazie per aver aperto un ticket, il founder ti risponderà a breve per la proposta di partnership!")
         })
     }
 })
