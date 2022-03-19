@@ -449,8 +449,8 @@ client.on("messageCreate", message => {
     if (message.content == "!nuovoticketpartner") {
         var embedticket = new Discord.MessageEmbed()
         .setColor('#ff002b')
-        .setTitle('TICKET')
-        .setDescription('Clicca sul bottone per aprire un ticket')
+        .setTitle('PARTNERSHIP')
+        .setDescription('Clicca sul bottone per richiedere una partner')
         .setThumbnail('https://cdn.discordapp.com/attachments/947563942866198549/948322773246279730/ByZCX.jpg')
         
         var button1 = new Discord.MessageButton()
