@@ -1,7 +1,27 @@
-const Discord = require("discord.js")
+const Discord = require("discord.js");
 const client = new Discord.Client(
     {intents:["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_PRESENCES", "GUILD_MEMBERS"] }
-)
+);
+const mysql = reuire('nysql');
+
+var con = mysql.cretePool({
+    host: 'us-cdbr-east-05.cleardb.net',
+    port: 3306,
+    user: 'bb0f8614f20e0d',
+    password: '4ce905cb',
+    database: 'heroku_a17c25b9e38aea8'
+})
+
+client.on('message', message => {
+    con.query('SELECT * FROM users', function(err, result){
+        if (err) {
+            console.log(err)
+            return
+
+            console.log(result)
+        }
+    })
+})
 
 client.login(process.env.token)
 
