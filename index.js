@@ -2,67 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client(
     {intents:["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_PRESENCES", "GUILD_MEMBERS"] }
 );
-const mysql = reuire('mysql');
 
-var con = mysql.cretePool({
-    host: 'us-cdbr-east-05.cleardb.net',
-    port: 3306,
-    user: 'bb0f8614f20e0d',
-    password: '4ce905cb',
-    database: 'heroku_a17c25b9e38aea8'
-})
-
-client.on("message", message => {
-    con.query("SELECT * FROM users", function (err, result) {
-            if (err) {
-                    console.log(err)
-                    return
-            }
-
-            var users = result;
-
-            var index = users.findIndex(x => x.id == message.author.id)
-            if (index < 0) {
-                    con.query("INSERT INTO users VALUES ('" + message.member.user.username + "', " + message.author.id + ", 50)", function (err, result) {
-                            if (err) {
-                                    console.log(err)
-                                    return
-                            }
-                    })
-            }
-            else {
-                    var xp = users[index].xp;
-                    xp = xp + 50;
-                    con.query("UPDATE users SET xp = " + xp + " WHERE id = " + message.author.id, function (err, result) {
-                            if (err) {
-                                    console.log(err)
-                                    return
-                            }
-                    })
-            }
-
-    })
-
-
-    if (message.content == "!level") {
-            con.query("SELECT * FROM users", function (err, result) {
-                    if (err) {
-                            console.log(err)
-                            return
-                    }
-
-                    var users = result;
-                    var index = users.findIndex(x => x.id == message.author.id)
-                    if (index < 0) {
-                            message.channel.send("Hai 0 punti esperienza");
-                    }
-                    else {
-                            var xp = users[index].xp;
-                            message.channel.send("Hai " + xp + " punti esperienza");
-                    }
-            })
-    }
-})
 
 client.login(process.env.token)
 
