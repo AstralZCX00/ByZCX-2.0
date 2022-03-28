@@ -17,9 +17,8 @@ client.on('message', message => {
         if (err) {
             console.log(err)
             return
-
-            console.log(result)
         }
+        console.log(result)
     })
 })
 
