@@ -636,7 +636,7 @@ client.on("message", message => {
                         }
                         else {
                                 var xp = users[index].xp;
-                                message.channel.send("Hai " + xp + " punti esperienza" + message.author.toString());
+                                message.channel.send("Hai " + xp + " xp " + message.author.toString());
                         }
                 })
         }
