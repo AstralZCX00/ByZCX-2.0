@@ -18,7 +18,27 @@ client.on('message', message => {
             console.log(err)
             return
         }
-        console.log(result)
+
+        var users = result;
+        var index = users.findIndex(x => x.id == message.author.id)
+        if(index < 0){
+            con.query("INSERT INTO users VALUES ('" + message.member.user.username + "', " + message.author.id + ", 50)", function(err, result){
+                if (err) {
+                    console.log(err)
+                    return
+                }
+            })
+        }
+        else{
+            var xp = users[index].xp;
+            xp = xp + 50;
+            con.query("UPDATE users SET xp = " + xp + " WHERE id = " + message.author.id, function(err, result) {
+                if (err) {
+                    console.log(err)
+                    return
+                }
+            })
+        }
     })
 })
 
