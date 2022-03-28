@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client(
     {intents:["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_PRESENCES", "GUILD_MEMBERS"] }
 );
-const mysql = reuire('nysql');
+const mysql = reuire('mysql');
 
 var con = mysql.cretePool({
     host: 'us-cdbr-east-05.cleardb.net',
