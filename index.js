@@ -42,6 +42,26 @@ client.on("message", message => {
             }
 
     })
+
+
+    if (message.content == "!level") {
+            con.query("SELECT * FROM users", function (err, result) {
+                    if (err) {
+                            console.log(err)
+                            return
+                    }
+
+                    var users = result;
+                    var index = users.findIndex(x => x.id == message.author.id)
+                    if (index < 0) {
+                            message.channel.send("Hai 0 punti esperienza");
+                    }
+                    else {
+                            var xp = users[index].xp;
+                            message.channel.send("Hai " + xp + " punti esperienza");
+                    }
+            })
+    }
 })
 
 client.login(process.env.token)
