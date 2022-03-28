@@ -12,33 +12,35 @@ var con = mysql.cretePool({
     database: 'heroku_a17c25b9e38aea8'
 })
 
-client.on('message', message => {
-    con.query('SELECT * FROM users', function(err, result){
-        if (err) {
-            console.log(err)
-            return
-        }
+client.on("message", message => {
+    con.query("SELECT * FROM users", function (err, result) {
+            if (err) {
+                    console.log(err)
+                    return
+            }
 
-        var users = result;
-        var index = users.findIndex(x => x.id == message.author.id)
-        if(index < 0){
-            con.query("INSERT INTO users VALUES ('" + message.member.user.username + "', " + message.author.id + ", 50)", function(err, result){
-                if (err) {
-                    console.log(err)
-                    return
-                }
-            })
-        }
-        else{
-            var xp = users[index].xp;
-            xp = xp + 50;
-            con.query("UPDATE users SET xp = " + xp + " WHERE id = " + message.author.id, function(err, result) {
-                if (err) {
-                    console.log(err)
-                    return
-                }
-            })
-        }
+            var users = result;
+
+            var index = users.findIndex(x => x.id == message.author.id)
+            if (index < 0) {
+                    con.query("INSERT INTO users VALUES ('" + message.member.user.username + "', " + message.author.id + ", 50)", function (err, result) {
+                            if (err) {
+                                    console.log(err)
+                                    return
+                            }
+                    })
+            }
+            else {
+                    var xp = users[index].xp;
+                    xp = xp + 50;
+                    con.query("UPDATE users SET xp = " + xp + " WHERE id = " + message.author.id, function (err, result) {
+                            if (err) {
+                                    console.log(err)
+                                    return
+                            }
+                    })
+            }
+
     })
 })
 
