@@ -622,7 +622,7 @@ client.on("message", message => {
         })
 
 
-        if (message.content == "!level") {
+        if (message.content == "!livello") {
                 con.query("SELECT * FROM users", function (err, result) {
                         if (err) {
                                 console.log(err)
@@ -636,7 +636,7 @@ client.on("message", message => {
                         }
                         else {
                                 var xp = users[index].xp;
-                                message.channel.send("Hai " + xp + " xp " + message.author.toString());
+                                message.channel.send("Hai " + xp + "xp " + message.author.toString());
                         }
                 })
         }
