@@ -43,8 +43,8 @@ client.on("messageCreate", (message) => {
         .addField('\u200b', '\u200b')
         .addFields(
              {
-                 name: 'GRAFICHE SINGOLE',
-                 value: 'Dai €35.00 in poi (digita !/grafichesingole per sapere di più)',
+                 name: 'GRAFICHE',
+                 value: 'Dai €35.00 in poi (digita !/grafiche per sapere di più)',
                  inline: false 
              },
              {
@@ -63,7 +63,7 @@ client.on("messageCreate", (message) => {
 })
 
 client.on("messageCreate", (message) => {
-    if (message.content == "!/grafichesingole") {
+    if (message.content == "!/grafiche") {
         var embed4 = new Discord.MessageEmbed()
         .setColor('#ff002b')
         .setTitle('PREZZI GRAFICHE')
@@ -98,7 +98,7 @@ client.on("messageCreate", (message) => {
              },
              {
                  name: 'VIDEO CLIP',
-                 value: '€55.00 ogni 15 minuti (i prezzi veranno scalati in base alla lunghezza del video clip) + preventivo di €15.00',
+                 value: '€75.00 ogni 15 minuti (i prezzi veranno scalati in base alla lunghezza del video clip) + preventivo del 20% (il preventivo viene sottratto dal pagamento finale.)',
                  inline: false
              },
              {
